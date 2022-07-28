@@ -5,6 +5,8 @@ import { AddProductComponent } from './pages/add-product/add-product.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ProductIdComponent } from './pages/product-id/product-id.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ListProductComponent } from './pages/list-product/list-product.component';
+import { ProductsRoutingModule } from './products-routing.module';
 
 
 
@@ -13,10 +15,12 @@ import { HomeComponent } from './pages/home/home.component';
     AddProductComponent,
     SearchComponent,
     ProductIdComponent,
-    HomeComponent
+    HomeComponent,
+    ListProductComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductsRoutingModule
   ]
 })
 export class ProductsModule { }
