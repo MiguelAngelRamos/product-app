@@ -7,6 +7,7 @@ import { ProductIdComponent } from './pages/product-id/product-id.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListProductComponent } from './pages/list-product/list-product.component';
 import { ProductsRoutingModule } from './products-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -20,7 +21,8 @@ import { ProductsRoutingModule } from './products-routing.module';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    MaterialModule
   ]
 })
 export class ProductsModule { }

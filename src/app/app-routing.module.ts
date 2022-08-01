@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Error404Component } from './shared/error404/error404.component';
 
 const routes: Routes = [
+  //* localhost:4200/products
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   { path: '404', component: Error404Component },
