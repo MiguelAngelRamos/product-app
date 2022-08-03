@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListProductComponent } from './pages/list-product/list-product.component';
 import { ProductsRoutingModule } from './products-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { CardProductComponent } from './components/card-product/card-product.component';
 
 
 
@@ -17,7 +18,8 @@ import { MaterialModule } from '../material/material.module';
     SearchComponent,
     ProductIdComponent,
     HomeComponent,
-    ListProductComponent
+    ListProductComponent,
+    CardProductComponent
   ],
   imports: [
     CommonModule,

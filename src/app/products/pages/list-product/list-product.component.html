@@ -1,1 +1,17 @@
-<p>list-product works!</p>
+<h1>Listado de Producto</h1>
+<mat-divider></mat-divider>
+<br>
+
+<!-- *Nuestra fila (row)-->
+<div
+  fxLayout="row wrap"
+  fxFlex="20"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+  >
+  <div *ngFor="let product of products">
+    <!-- * Una tarjeta Angular Material -->
+    <app-card-product [product]="product"></app-card-product>
+  </div>
+</div>

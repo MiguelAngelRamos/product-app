@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{product.title}}</mat-card-title>
+  </mat-card-header>
+
+  <img [src]="product.image">
+
+  <mat-card-content>
+    <h3>Información del Producto</h3>
+    <p>
+      <strong>Precio</strong> {{ product.precio }}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button color="warn" [routerLink]="['/products',product.id]">Ir Producto</button>
+    <button mat-button color="info">Editar</button>
+  </mat-card-actions>
+
+</mat-card>
