@@ -9,6 +9,8 @@ import { ListProductComponent } from './pages/list-product/list-product.componen
 import { ProductsRoutingModule } from './products-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { CardProductComponent } from './components/card-product/card-product.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -24,7 +26,9 @@ import { CardProductComponent } from './components/card-product/card-product.com
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule
   ]
 })
 export class ProductsModule { }

@@ -9,6 +9,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+//* AutoComplete
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
  exports: [
@@ -19,7 +23,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
   MatListModule,
   MatCardModule,
   MatProgressSpinnerModule,
-  MatGridListModule
+  MatGridListModule,
+  MatAutocompleteModule,
+  MatInputModule,
+  MatFormFieldModule
+ 
  ]
 })
 export class MaterialModule { }

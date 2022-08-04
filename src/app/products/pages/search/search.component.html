@@ -1,1 +1,29 @@
-<p>search works!</p>
+<div fxLayout="column">
+  <div>
+    <h1>Buscador de Productos</h1>
+  </div>
+
+  <div fxLayout="column">
+    <h3>Buscador</h3>
+
+    <mat-form-field>
+      <mat-label>Number</mat-label>
+      <input type="text"
+             placeholder="Pick one"
+             aria-label="Number"
+             matInput
+             [(ngModel)] = "termino"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <!-- <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option> -->
+      </mat-autocomplete>
+    </mat-form-field>
+
+  </div>
+
+  <!-- Es aqui donde necesitamos mostrar el producto -->
+  <!--* control + k + c -->
+  <!--* control + k + u -->
+</div>

@@ -22,4 +22,10 @@ export class DataProductsService {
   getProductsById(id: number):Observable<IProduct> {
     return this.http.get<IProduct>(`${this.baseUrl}/products/${id}`);
   }
+  //* mac, hyper
+  getSuggestions(termino: string): Observable<IProduct[]> {
+    //* alt + 96 ``
+    return this.http.get<IProduct[]>(`${this.baseUrl}/products?q=${termino}&_limit=6`);
+  }
+  //* http://localhost:3000/products?q=gamer&_limit=2
 }

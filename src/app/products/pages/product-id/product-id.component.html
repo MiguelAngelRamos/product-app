@@ -1,1 +1,33 @@
-<pre>{{ producto | json }}</pre>
+<mat-grid-list cols="1" *ngIf="!product; else divProduct">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divProduct>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutHGap="30px">
+
+    <div fxFlex="50">
+      <h1>{{ product.title }} <small>{{ product.precio }}</small></h1>
+      <mat-divider></mat-divider>
+      <img [src]="product.image" alt="product">
+    </div>
+    <div fxFlex="50">
+      <h1>{{ product.title }}</h1>
+      <mat-divider></mat-divider>
+
+      <mat-list>
+        <mat-list-item>{{ product.precio}}</mat-list-item>
+        <mat-list-item>{{ product.precio}}</mat-list-item>
+        <mat-list-item>{{ product.precio}}</mat-list-item>
+        <mat-list-item>{{ product.precio}}</mat-list-item>
+        <mat-list-item>{{ product.precio}}</mat-list-item>
+      </mat-list>
+
+      <br>
+      <button mat-button color="warn" (click)="back()">Regresar</button>
+    </div>
+
+    <!-- * una tabla vamos las especificaciones del producto-->
+  </div>
+</ng-template>

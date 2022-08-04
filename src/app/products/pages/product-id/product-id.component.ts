@@ -10,7 +10,7 @@ import { DataProductsService } from '../../services/data-products.service';
   styleUrls: ['./product-id.component.scss']
 })
 export class ProductIdComponent implements OnInit {
-  producto!: IProduct;
+  product!: IProduct;
   constructor( 
     private activateRoute: ActivatedRoute,
     private dataProductsService: DataProductsService,
@@ -18,7 +18,7 @@ export class ProductIdComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-     this.activateRoute.params.subscribe(({ id }) => this.dataProductsService.getProductsById(+id).subscribe( product => this.producto = product)); //* {id: 1}
+     this.activateRoute.params.subscribe(({ id }) => this.dataProductsService.getProductsById(+id).subscribe( product => this.product = product)); //* {id: 1}
     // this.activateRoute.params.subscribe(({ id }) => console.log(typeof(Number(id))));
     //* el switchMap retorna otro observable y toma la data del observable anterior
     //* Si llegara a recibir otro valor del observable anterior esto quiere decir que el observable anterior al switchMap(activateRoute). cancela todo
