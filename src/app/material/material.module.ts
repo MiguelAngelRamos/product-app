@@ -14,6 +14,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+//* Select
+import { MatSelectModule } from '@angular/material/select';
+
 @NgModule({
  exports: [
   MatSidenavModule,
@@ -26,7 +29,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   MatGridListModule,
   MatAutocompleteModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatSelectModule
  
  ]
 })

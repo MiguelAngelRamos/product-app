@@ -1,28 +1,48 @@
 <div fxLayout="column">
   <div>
     <h1>Buscador de Productos</h1>
+  
   </div>
 
   <div fxLayout="column">
-    <h3>Buscador</h3>
+  
 
     <mat-form-field>
-      <mat-label>Number</mat-label>
+      <mat-label>Buscador</mat-label>
+
       <input type="text"
-             placeholder="Pick one"
+             placeholder="Seleccione un producto"
              aria-label="Number"
              matInput
-             [(ngModel)] = "termino"
-             [matAutocomplete]="auto">
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        <!-- <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{option}}
-        </mat-option> -->
-      </mat-autocomplete>
-    </mat-form-field>
+             [(ngModel)]="termino"
+             [matAutocomplete]="auto" 
+             (input)="searchProduct()"/>
 
+            
+
+      <mat-autocomplete 
+        autoActiveFirstOption 
+        #auto="matAutocomplete"
+        (optionSelected)="opcionSeleccionada($event)"
+      >
+
+        <mat-option *ngFor="let product of products" [value]="product">
+          {{ product.title }}
+        </mat-option>
+        
+        <mat-option *ngIf="products.length === 0 && termino && termino.trim().length > 0">
+          No se encontro nada con el terminoi: {{ termino }}
+        </mat-option>
+
+      </mat-autocomplete>
+
+    </mat-form-field>
+  
   </div>
 
+  <div>
+    <pre>{{ productoSeleccionado | json }}</pre>
+  </div>
   <!-- Es aqui donde necesitamos mostrar el producto -->
   <!--* control + k + c -->
   <!--* control + k + u -->
