@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IProduct } from '../../interfaces/IProduct';
 import { DataProductsService } from '../../services/data-products.service';
 
@@ -29,14 +30,20 @@ export class AddProductComponent implements OnInit {
     stock: 0,
     empresa: ''
   }
-  constructor(private dataProductService: DataProductsService) { }
+  constructor(
+    private dataProductService: DataProductsService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   saveProduct() {
-    // this.dataProductService.addProduct()
+    console.log(this.producto);
+    this.dataProductService.addProduct(this.producto).subscribe(producto => {
+      console.log(producto);
+      this.router.navigate(['/products']);
+    })
   }
 
 }

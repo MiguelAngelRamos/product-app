@@ -61,12 +61,23 @@
       [(ngModel)]="producto.image"
     >
     </mat-form-field>
+    <br>
+    <pre>{{ producto | json }}</pre>
+    <div fxLayout>
+      <button mat-raised-button color="primary" (click)="saveProduct()">
+        <mat-icon>save</mat-icon>
+        Guardar
+      </button>
+    </div>
 
   </div>
 
   <!-- *La imagen del producto -->
-  <div fxFlex="50" fxLayout="column">
-    <img [src]="producto | imagen" alt="imagen producto">
+  <div fxFlex="50">
+    <div class="img-product">
+      <img [src]="producto | imagen" alt="imagen producto">
+    </div>
+    
   </div>
 
    <!-- *Fin de la imagen del producto -->
