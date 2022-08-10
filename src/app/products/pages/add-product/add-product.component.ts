@@ -19,7 +19,8 @@ export class AddProductComponent implements OnInit {
     { id: 'motorola', desc: 'Motorola'},
     { id: 'huawei', desc: 'Huawei'},
     { id: 'wharfedale', desc: 'Wharfedale'},
-    { id: 'lyonx', desc: 'LyonX'} ];
+    { id: 'lyonx', desc: 'LyonX'} 
+  ];
 
   producto: IProduct = {
     precio: 0,
@@ -35,7 +36,7 @@ export class AddProductComponent implements OnInit {
 
 
   saveProduct() {
-    this.dataProductService.addProduct()
+    // this.dataProductService.addProduct()
   }
 
 }
