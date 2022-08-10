@@ -11,6 +11,7 @@ import { MaterialModule } from '../material/material.module';
 import { CardProductComponent } from './components/card-product/card-product.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { ImagenPipe } from './pipe/imagen.pipe';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     ProductIdComponent,
     HomeComponent,
     ListProductComponent,
-    CardProductComponent
+    CardProductComponent,
+    ImagenPipe
   ],
   imports: [
     CommonModule,
