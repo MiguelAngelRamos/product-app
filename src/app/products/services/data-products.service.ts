@@ -28,4 +28,10 @@ export class DataProductsService {
     return this.http.get<IProduct[]>(`${this.baseUrl}/products?q=${termino}&_limit=6`);
   }
   //* http://localhost:3000/products?q=gamer&_limit=2
+
+  addProduct(producto: IProduct) {
+    //* params
+    // *const headers =  new HttpHeaders().set('Content-Type', 'application/json).set('Authorization', token )
+    return this.http.post<IProduct>(`${this.baseUrl}/products`, producto);
+  }
 }

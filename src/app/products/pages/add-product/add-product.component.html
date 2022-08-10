@@ -8,19 +8,36 @@
 
     <mat-form-field fxLayout.xs="column">
       <mat-label>Nombre del Producto</mat-label>
-      <input matInput type="text" required>
+      <input 
+        matInput 
+        type="text" 
+        required
+        [(ngModel)]="producto.title"
+      >
     </mat-form-field>
 
     <!-- *precio y el stock -->
     <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+
       <mat-form-field fxFlex="100" >
         <mat-label>Precio</mat-label>
-        <input matInput type="text" required>
+        <input 
+          matInput 
+          type="text" 
+          required
+          [(ngModel)]="producto.precio"
+        >
       </mat-form-field>
+
 
       <mat-form-field fxFlex="100">
         <mat-label>Stock</mat-label>
-        <input matInput type="text" required>
+        <input 
+          matInput 
+          type="text" 
+          required
+          [(ngModel)]="producto.stock"
+        >
       </mat-form-field>
     </div>
     <!-- *Fin de precio y el stock -->
@@ -28,9 +45,21 @@
     <mat-form-field fxFlex="100">
       <mat-label>Empresa</mat-label>
 
-      <mat-select required>
-        <mat-option>1</mat-option>
+      <mat-select [(ngModel)]="producto.empresa" required>
+        <mat-option *ngFor="let empresa of empresas" [value]="empresa.id">
+          {{ empresa.desc }}
+        </mat-option>
       </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Imagen Url</mat-label>
+      <input 
+      matInput 
+      type="url" 
+      required
+      [(ngModel)]="producto.image"
+    >
     </mat-form-field>
 
   </div>
