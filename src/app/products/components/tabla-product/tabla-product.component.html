@@ -1,0 +1,15 @@
+<h2>Especificaciones</h2>
+
+<div class="table-container">
+  <div fxFlex="100" class="table-header">
+    <div *ngFor="let e of especificaciones | keyvalue">
+      {{ e.key }} 
+    </div>
+  </div>
+
+  <div fxFlex="100" class="table-cotent">
+    <div *ngFor="let espe of especificaciones | keyvalue">
+      {{ espe.value }}
+    </div>
+  </div>
+</div>

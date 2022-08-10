@@ -30,4 +30,12 @@
 
     <!-- * una tabla vamos las especificaciones del producto-->
   </div>
+
+  <div fxLayout="row">
+    <app-tabla-product 
+    fxFlex="100" 
+    [especificaciones]="product.especificaciones"
+    >
+    </app-tabla-product>
+  </div>
 </ng-template>

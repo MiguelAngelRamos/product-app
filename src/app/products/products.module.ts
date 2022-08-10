@@ -12,6 +12,7 @@ import { CardProductComponent } from './components/card-product/card-product.com
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ImagenPipe } from './pipe/imagen.pipe';
+import { TablaProductComponent } from './components/tabla-product/tabla-product.component';
 
 
 
@@ -23,7 +24,8 @@ import { ImagenPipe } from './pipe/imagen.pipe';
     HomeComponent,
     ListProductComponent,
     CardProductComponent,
-    ImagenPipe
+    ImagenPipe,
+    TablaProductComponent
   ],
   imports: [
     CommonModule,
