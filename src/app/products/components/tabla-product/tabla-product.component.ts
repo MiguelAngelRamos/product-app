@@ -7,10 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TablaProductComponent implements OnInit {
 
-  @Input() especificaciones: any;
+  @Input() especificaciones: any; //* No es un Array es un objeto
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // persona = {
+  //   nombre: 'Miguel',
+  //   pais: 'Chile'
+  // }
+
+  // key = { nombre, pais}
+  // value = { Miguel, Chile}
 
 }

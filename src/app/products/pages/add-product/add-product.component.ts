@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from '../../interfaces/IProduct';
 import { DataProductsService } from '../../services/data-products.service';
 
@@ -32,9 +32,22 @@ export class AddProductComponent implements OnInit {
   }
   constructor(
     private dataProductService: DataProductsService,
-    private router: Router) { }
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.router.url); // * desde que url vengo
+    console.log(this.router.url.includes('edit-product'));
+    
+    if(!this.router.url.includes('edit-product')) {
+      return;
+    }
+    this.activatedRoute.params.subscribe(({id}) => {
+      this.dataProductService.getProductsById(id).subscribe( producto => {
+        this.producto = producto;
+        console.log(producto);
+      })
+    })
   }
 
 
